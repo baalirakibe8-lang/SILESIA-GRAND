@@ -1,7 +1,7 @@
 
 import React, { useState, useRef, useEffect } from 'react';
-import { getConciergeResponse } from '../services/geminiService';
-import { ChatMessage } from '../types';
+import { getConciergeResponse } from '../services/geminiService.ts';
+import { ChatMessage } from '../types.ts';
 
 const AIConcierge: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,7 +30,6 @@ const AIConcierge: React.FC = () => {
     if (!customMessage) setInput('');
     setIsLoading(true);
 
-    // Pass history (excluding current userMsg) to the service
     const responseText = await getConciergeResponse(textToSend, messages);
     setMessages(prev => [...prev, { role: 'model', text: responseText || "I'm sorry, I couldn't process that. Please try again." }]);
     setIsLoading(false);

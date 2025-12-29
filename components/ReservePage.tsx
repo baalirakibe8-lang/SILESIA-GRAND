@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { ROOMS } from '../constants';
+import { ROOMS } from '../constants.tsx';
 
 interface ReservePageProps {
   onNavigate: (view: 'home' | 'suites' | 'reserve') => void;
@@ -46,7 +46,6 @@ const ReservePage: React.FC<ReservePageProps> = ({ onNavigate }) => {
         </header>
 
         <div className="bg-white shadow-3xl overflow-hidden rounded-lg flex flex-col lg:flex-row border border-stone-100">
-          {/* Form Side */}
           <div className="lg:w-7/12 p-8 md:p-16 border-b lg:border-b-0 lg:border-r border-stone-100">
             <form onSubmit={handleSubmit} className="space-y-10">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -153,7 +152,6 @@ const ReservePage: React.FC<ReservePageProps> = ({ onNavigate }) => {
             </form>
           </div>
 
-          {/* Details / Summary Side */}
           <div className="lg:w-5/12 bg-stone-50 p-8 md:p-16 flex flex-col justify-between">
             <div className="space-y-12">
               <div className="pb-8 border-b border-stone-200">

@@ -1,5 +1,5 @@
 
-import { Room, Amenity } from './types';
+import { Room, Amenity } from './types.ts';
 
 export const ROOMS: Room[] = [
   {
@@ -40,7 +40,7 @@ export const ROOMS: Room[] = [
     price: 195,
     image: 'https://images.unsplash.com/photo-1595576508898-0ad5c879a061?auto=format&fit=crop&q=80&w=1200',
     gallery: [
-      'https://images.unsplash.com/photo-1505693419148-186716a125b2?auto=format&fit=crop&q=80&w=800',
+      'https://images.unsplash.com/photo-1505693419148-186716a125b2?auto=format&fit=crop&q=80&w=1200',
       'https://images.unsplash.com/photo-1544124499-58912cbddaad?auto=format&fit=crop&q=80&w=800',
       'https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&q=80&w=800'
     ],

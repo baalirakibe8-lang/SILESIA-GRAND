@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
-import { ROOMS } from '../constants';
-import { Room } from '../types';
+import { ROOMS } from '../constants.tsx';
+import { Room } from '../types.ts';
 
 interface SuitesPageProps {
   onSelectRoom: (room: Room) => void;
@@ -17,7 +17,6 @@ const SuitesPage: React.FC<SuitesPageProps> = ({ onSelectRoom }) => {
 
   return (
     <div className="bg-white min-h-screen pt-32 pb-32">
-      {/* Header */}
       <div className="max-w-7xl mx-auto px-6 mb-24 text-center">
         <span className="text-amber-600 uppercase text-[10px] tracking-[0.4em] font-bold mb-6 block animate-in fade-in slide-in-from-bottom duration-700">The Silesian Collection</span>
         <h1 className="text-5xl md:text-7xl font-serif text-stone-900 mb-8 animate-in fade-in slide-in-from-bottom duration-700 delay-100">Extraordinary <br/><span className="italic font-light">LIVING</span></h1>
@@ -26,7 +25,6 @@ const SuitesPage: React.FC<SuitesPageProps> = ({ onSelectRoom }) => {
         </p>
       </div>
 
-      {/* Filter Bar */}
       <div className="sticky top-[72px] z-40 bg-white/80 backdrop-blur-md border-y border-stone-100 mb-16">
         <div className="max-w-7xl mx-auto px-6 flex justify-center gap-12 py-6 overflow-x-auto whitespace-nowrap scrollbar-hide">
           {(['all', 'suite', 'loft', 'studio'] as const).map((cat) => (
@@ -46,14 +44,12 @@ const SuitesPage: React.FC<SuitesPageProps> = ({ onSelectRoom }) => {
         </div>
       </div>
 
-      {/* Grid */}
       <div className="max-w-7xl mx-auto px-6 space-y-32">
         {filteredRooms.map((room, idx) => (
           <div 
             key={room.id} 
             className={`flex flex-col ${idx % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-12 lg:gap-24 items-center group`}
           >
-            {/* Image side */}
             <div 
               className="w-full lg:w-3/5 relative overflow-hidden cursor-pointer aspect-[16/10]"
               onClick={() => onSelectRoom(room)}
@@ -69,7 +65,6 @@ const SuitesPage: React.FC<SuitesPageProps> = ({ onSelectRoom }) => {
               </div>
             </div>
 
-            {/* Content side */}
             <div className="w-full lg:w-2/5 space-y-8">
               <div>
                 <div className="flex justify-between items-baseline mb-4">

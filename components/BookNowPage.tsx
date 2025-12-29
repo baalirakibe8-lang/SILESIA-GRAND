@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { ROOMS } from '../constants';
+import { ROOMS } from '../constants.tsx';
 
 interface BookNowPageProps {
   onNavigate: (view: 'home' | 'suites' | 'reserve' | 'booking') => void;
@@ -52,11 +52,7 @@ const BookNowPage: React.FC<BookNowPageProps> = ({ onNavigate }) => {
   return (
     <div className="bg-stone-950 min-h-screen pt-32 pb-32 text-white selection:bg-amber-500 selection:text-white">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-16">
-        
-        {/* Left: Interactive Wizard */}
         <div className="lg:col-span-8 space-y-12">
-          
-          {/* Progress Indicator */}
           <div className="flex items-center gap-4 mb-16 overflow-hidden">
             {[1, 2, 3].map(s => (
               <div key={s} className="flex items-center gap-4 group cursor-default">
@@ -204,7 +200,6 @@ const BookNowPage: React.FC<BookNowPageProps> = ({ onNavigate }) => {
             </div>
           )}
 
-          {/* Navigation Controls */}
           <div className="pt-16 flex justify-between border-t border-stone-900">
             {step > 1 ? (
               <button 
@@ -233,7 +228,6 @@ const BookNowPage: React.FC<BookNowPageProps> = ({ onNavigate }) => {
           </div>
         </div>
 
-        {/* Right: Stay Summary Sidebar */}
         <div className="lg:col-span-4 lg:sticky lg:top-32 h-fit space-y-8">
           <div className="bg-stone-900/40 backdrop-blur-md border border-stone-800 p-8 rounded-lg space-y-8">
             <h3 className="text-[10px] uppercase tracking-[0.3em] font-bold text-stone-500 border-b border-stone-800 pb-4">Itinerary Summary</h3>
