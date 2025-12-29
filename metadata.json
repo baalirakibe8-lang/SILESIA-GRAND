@@ -1,0 +1,7 @@
+{
+  "name": "Silesia Grand Hotel & Spa",
+  "description": "A premium boutique hotel website featuring luxury rooms, wellness facilities, and a Gemini-powered AI concierge for personalized guest assistance.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
