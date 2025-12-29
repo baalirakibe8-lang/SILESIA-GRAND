@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect, useCallback, useRef, useMemo } from 'react';
-import { Room, UserImage } from '../types';
-import { compressImage } from '../utils/imageUtils';
+import { Room, UserImage } from '../types.ts';
+import { compressImage } from '../utils/imageUtils.ts';
 
 interface RoomDetailsModalProps {
   room: Room;

@@ -1,7 +1,7 @@
 
 import { GoogleGenAI } from "@google/genai";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || "" });
+const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
 const HOTEL_CONTEXT = `
 You are the "Grand Silesian Guide," an elite AI Concierge for the Silesia Grand Hotel & Spa in Katowice.
@@ -29,7 +29,6 @@ Booking: You can "soft-book" by taking guest details (name, dates, guests) and t
 
 export async function getConciergeResponse(userMessage: string, history: {role: 'user' | 'model', text: string}[]) {
   try {
-    // Map existing history to the format expected by the SDK
     const formattedHistory = history.map(msg => ({
       role: msg.role,
       parts: [{ text: msg.text }]

@@ -1,13 +1,13 @@
 
 import React, { useState, useEffect } from 'react';
-import Navbar from './components/Navbar';
-import AIConcierge from './components/AIConcierge';
-import RoomDetailsModal from './components/RoomDetailsModal';
-import SuitesPage from './components/SuitesPage';
-import ReservePage from './components/ReservePage';
-import BookNowPage from './components/BookNowPage';
-import { ROOMS, AMENITIES } from './constants';
-import { Room, UserImage } from './types';
+import Navbar from './components/Navbar.tsx';
+import AIConcierge from './components/AIConcierge.tsx';
+import RoomDetailsModal from './components/RoomDetailsModal.tsx';
+import SuitesPage from './components/SuitesPage.tsx';
+import ReservePage from './components/ReservePage.tsx';
+import BookNowPage from './components/BookNowPage.tsx';
+import { ROOMS, AMENITIES } from './constants.tsx';
+import { Room, UserImage } from './types.ts';
 
 const App: React.FC = () => {
   const [view, setView] = useState<'home' | 'suites' | 'reserve' | 'booking'>('home');
